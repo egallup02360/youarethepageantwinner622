@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>You Won!</title>
+  <style type="text/css">
+    body { font-family: Arial, sans-serif; background-color: #000; }
+    .centered-div { width: 500px; height: 600px; background-color: #FFF; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .blink { animation: blinker 1s linear infinite; font-size: 6em; }
+    @keyframes blinker { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <div class="centered-div">
+    <span class="blink">YOU HAVE WON THE PAGEANT!</span>
+    <div id="video" style="display:none;">
+      <video width="500" height="260" autoplay muted>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <script>
+    setTimeout(function(){ document.getElementById('video').style = null }, 5000);
+  </script>
+</body>
+</html>
